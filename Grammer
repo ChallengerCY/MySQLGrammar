@@ -1,0 +1,62 @@
+//创建一个数据库，名字叫做serCY
+CREATE DATABASE UserCY;
+
+//使用这个数据库
+use UserCY;
+
+//查看当前数据库中的表
+show tables;
+
+//查看当前表结构
+describe user;
+
+//在数据库中创建一个表
+create table user(
+age int,
+name varchar(20),
+num int);
+
+//往表中插入一条数据
+insert into user values('23','CY','132105104');
+
+//索引当前表中所有的数据
+select * from user;
+
+//按表中的字段进行查询
+select name from user;
+
+//索引多个表中字段
+select name,age,num from user;
+
+//使用where条件对查询结果进行过滤
+ select * from user where name = 'Y';
+
+//使用多个where条件
+select * from user where name = 'Y' and num='132105101';
+
+//更新一条数据
+ update user set age = 30 where name = 'Y';
+
+//删除一条数据
+delete from user where name = 'Y';
+
+//修改表的结构，增加一列属性
+alter table user add home varchar(20);
+
+//删除一列属性
+alter table user drop home;
+
+//重命名指定的列
+alter table user change age aaggee int;
+
+//修改表中列的类型
+alter table user change aaggee aaggee varchar(20) not null;
+
+//修改表名字
+alter table user rename users;
+
+//删除表
+show tables;
+
+
+
